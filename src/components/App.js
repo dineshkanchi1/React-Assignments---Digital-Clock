@@ -26,7 +26,7 @@ class App extends Component {
   componentDidMount() {
     this.intervalId = setInterval(() => this.count(), 1000);
   }
-  componentWillMount() {
+  componentWillUnmount() {
     clearInterval(this.intervalId);
   }
   render() {
